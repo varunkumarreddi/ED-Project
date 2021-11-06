@@ -2,7 +2,6 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 /* Home page */
@@ -59,7 +58,8 @@ nav {
   }
 }
 @media only screen and (max-width: 600px) {
-  body {
+  .main {
+    position: relative;
     overflow-x: hidden;
   }
   .nav {
