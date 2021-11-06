@@ -11,7 +11,7 @@ const navSlide=()=>{
       if(link.style.animation){
         link.style.animation= '';
       }else{
-        link.style.animation = `navListFade 0.5s ease forwards ${index / 7 +0.3}s`;
+        link.style.animation = `navListFade 0.5s ease forwards ${index / 7 }s`;
       }
     });
 
@@ -28,10 +28,8 @@ navSlide();
 const tl = gsap.timeline({ defaults: { ease: 'power1.out' } });
 
 tl.to('.text', { y: '0%', duration: 1, stagger: 0.25, delay: 2.2 })
-  .to('.slider3', { y: '100%', duration: 0.8 ,delay:0.8})
-  .to('.intro', { y: '-100%', duration: 0.8, delay:0.2 })
-  .to('.slider3', { y: '-100%', duration: 0.6 }, '-=1')
-  .fromTo('.home',{ opacity:0 },{opacity: 1, duration:1},'-=0.5')
+  .fromTo('.intro', { opacity:1},{opacity:0, duration: 1})
+  .fromTo('.home',{ opacity:0 },{opacity: 1, duration:1},'-=0.2')
   .to('.landing',{y:'-100%', duration:0})
 
 
