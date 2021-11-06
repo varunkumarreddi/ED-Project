@@ -19,7 +19,7 @@ body {
   overflow: hidden;
   background-size: cover;
   background-position: center;
-  background-image: url('logo1.jpg');
+  background-image: url('/logo1.jpg');
 }
 nav {
   display: flex;
@@ -155,7 +155,7 @@ nav {
   font-family: 'Playfair Display', serif;
   font-size: 1.2rem;
   letter-spacing: 0.5px;
-  color: #2c2c2c;
+  color: #111111;
 }
 
 .hide {
