@@ -1,14 +1,18 @@
 const navSlide=()=>{
   const burger= document.querySelector('.burger');
-  const nav= document.querySelector('.navlist');
-  const navList = document.querySelectorAll('.navlist li');
+  const navList= document.querySelector('.navlist');
+  const navLinks = document.querySelectorAll('.navlist li');
   const fade = document.querySelector('.fade');
-  //toggle Nav
+
+  
+  //toggle Nav1
   burger.addEventListener('click',()=>{
-    nav.classList.toggle('nav-active');
+    navList.classList.toggle('nav-active');
     fade.classList.toggle('fade-active');
     //Animate Links
-    navList.forEach((link,index)=>{
+    
+
+    navLinks.forEach((link,index)=>{
       if(link.style.animation){
         link.style.animation= '';
       }else{
@@ -19,6 +23,23 @@ const navSlide=()=>{
     //Burger animation
     burger.classList.toggle('toggle');
   })
+
+  //toggle Nav1
+  fade.addEventListener('click',()=>{
+    
+    navList.classList.remove('nav-active');
+    fade.classList.remove('fade-active');
+    
+    // Animate Links
+    navLinks.forEach((link,index)=>{
+      if(link.style.animation){
+        link.style.animation= '';
+      }else{
+        link.style.animation = `navListFade 0.5s ease forwards ${index / 7 }s`;
+      }
+    });
+    burger.classList.toggle('toggle');
+  });
   
 }
 
