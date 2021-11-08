@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  position: relative;
   
 }
 .main{
@@ -39,7 +40,7 @@ nav {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  
+  z-index: 1000;
 }
 
 .navlist {
@@ -78,12 +79,12 @@ nav {
   }
 }
 @media only screen and (max-width: 600px) {
-  .main {
-    position: relative;
-    overflow-x: hidden;
+  .nav{
+    position: fixed;
+    width: 100%;
   }
   .navlist {
-    position: absolute;
+    position: fixed;
     right: 0px;
     height: 92vh;
     top: 8vh;
@@ -96,7 +97,6 @@ nav {
     padding: 0;
     transform: translateX(100%);
     transition: transform 0.5s ease;
-    z-index: 2;
   }
   .navlist li {
     opacity: 0;
@@ -135,16 +135,18 @@ nav {
 
 .fade{
   position: absolute;
-  top: 8vh;
-  height: inherit;
+  top:0;
+  height: 100%;
   width: 100%;
   background-color: black;
   opacity: 0;
   transition: opacity 0.5s ease;
+  display: none;
 }
 
 .fade-active{
   opacity: 0.5;
+  display: block;
 }
 
 
@@ -153,7 +155,8 @@ nav {
 
 
 
-/* Welcome*/
+/* Content*/
+
 
 .welcome{
   display: flex;
