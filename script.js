@@ -2,10 +2,11 @@ const navSlide=()=>{
   const burger= document.querySelector('.burger');
   const nav= document.querySelector('.navlist');
   const navList = document.querySelectorAll('.navlist li');
+  const fade = document.querySelector('.fade');
   //toggle Nav
   burger.addEventListener('click',()=>{
     nav.classList.toggle('nav-active');
-
+    fade.classList.toggle('fade-active');
     //Animate Links
     navList.forEach((link,index)=>{
       if(link.style.animation){
