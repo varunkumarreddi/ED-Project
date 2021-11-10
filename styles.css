@@ -157,6 +157,7 @@ nav {
 
 /* Content*/
 
+
 .welcome{
   display: flex;
   width: 100%;
@@ -177,7 +178,7 @@ nav {
 }
 
 .violet{
-  background-color: rgb(230, 203, 255);
+  background-color: rgb(224, 192, 255);
 }
 
 
