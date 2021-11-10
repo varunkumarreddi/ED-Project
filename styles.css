@@ -156,7 +156,11 @@ nav {
 
 
 /* Content*/
-
+.content{
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 92vh;
+}
 
 .welcome{
   display: flex;
@@ -164,6 +168,7 @@ nav {
   height: 92vh;
   justify-content: center;
   align-items: center;
+  scroll-snap-align: start;
 }
 
 .blue{
